@@ -25,3 +25,49 @@ Explanation: There are three ways to climb to the top.
 2. 1 step + 2 steps
 3. 2 steps + 1 step
 ```
+Implementation :
+
+```java
+public class App {
+	
+	public static void main(String[] args) {
+		System.out.println("Total ways to climb 3 stairs: "+climbStairs(3));
+	}
+	
+	// Runtime = O(n) , Space = O(n)
+	private static  int climbStairs(int n) {
+         int[] dpTable = new int[n+1];
+         dpTable[0] = 1;
+         dpTable[1] = 1;
+         for(int i = 2; i <= n; i++){
+             dpTable[i] = dpTable[i-1] + dpTable[i-2];
+         }
+         return dpTable[n];
+    }
+}
+
+```
+
+
+
+```java
+public class App {
+	
+	public static void main(String[] args) {
+		System.out.println("Total ways to climb 3 stairs: "+climbStairs(3));
+	}
+	
+	// Runtime = O(n) , Space = O(1)
+	private static  int climbStairs(int n) {
+		int oneStairBefore = 1;
+        int twoStairsBefore = 1;
+        int nthStair = 1;
+        for(int i = 2; i <= n; i++){
+            nthStair = oneStairBefore +  twoStairsBefore;
+            oneStairBefore = twoStairsBefore;
+            twoStairsBefore = nthStair;
+        }
+        return nthStair;
+    }
+}
+```
