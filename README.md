@@ -25,7 +25,7 @@ Explanation: There are three ways to climb to the top.
 2. 1 step + 2 steps
 3. 2 steps + 1 step
 ```
-Implementation :
+### Implementation :
 
 ```java
 public class App {
@@ -48,6 +48,11 @@ public class App {
 
 ```
 
+The above implementation have both runtime and space complexity of O(n)
+```
+Runtime Complexity = O(n)
+Space Complexity   = O(n)
+```
 
 
 ```java
@@ -70,4 +75,10 @@ public class App {
         return nthStair;
       }
 }
+```
+
+The above implementation have runtime complexity of O(n) and space complexity of O(1)
+```
+Runtime Complexity = O(n)
+Space Complexity   = O(1)
 ```
