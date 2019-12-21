@@ -27,6 +27,7 @@ Explanation: There are three ways to climb to the top.
 ```
 ### Implementation :
 
+#### Dynamic Programming
 ```java
 public class App {
 	
@@ -54,7 +55,7 @@ Runtime Complexity = O(n)
 Space Complexity   = O(n)
 ```
 
-
+#### Dynamic Programming - Space Optimization O(1)
 ```java
 public class App {
 	
