@@ -65,16 +65,16 @@ public class App {
 	
 	// Runtime = O(n) , Space = O(1)
 	private static  int climbStairs(int n) {
-	 int oneStairBefore = 1;
+	     int oneStairBefore = 1;
          int twoStairsBefore = 1;
          int nthStair = 1;
          for(int i = 2; i <= n; i++){
             nthStair = oneStairBefore +  twoStairsBefore;
-            oneStairBefore = twoStairsBefore;
-            twoStairsBefore = nthStair;
+            twoStairsBefore =  oneStairBefore;
+            oneStairBefore = nthStair;
          }
         return nthStair;
-      }
+    }
 }
 ```
 
